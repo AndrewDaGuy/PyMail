@@ -19,7 +19,9 @@ print(f"{colors.bold}===================={colors.end}")
 print()
 print(f"{colors.yellow}Initializing{colors.end}")
 print(f"{colors.green} TIP: If your using gmail remember to turn off \"Less secure app access\" in Google Account > Secrity")
-print
+print()
+
+regex = r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)"
 try:
     server = smtplib.SMTP("smtp.gmail.com:587")
     server.starttls()
@@ -43,7 +45,7 @@ if username == "":
     print(f"{colors.red}Please enter a email.{colors.end}")
     sys.exit()
 
-if not re.search('^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$', username):
+if not re.search(regex, username):
     print(f"{colors.red}Please enter a vaild email address.{colors.end}")
     sys.exit()
 
@@ -81,7 +83,7 @@ if toEmail == "":
     print(f"{colors.red}Please enter a email.{colors.end}")
     sys.exit()
 
-if not re.search('^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$', toEmail):
+if not re.search(regex, toEmail):
     print(f"{colors.red}Please enter a vaild email address.{colors.end}")
     sys.exit()
 
