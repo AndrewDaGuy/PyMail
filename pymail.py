@@ -17,7 +17,6 @@ class colors:
 print(f"{colors.header}PyMail{colors.end}")
 print(f"{colors.bold}===================={colors.end}")
 print()
-print(f"{colors.yellow}Initializing{colors.end}")
 print(f"{colors.green} TIP: If your using gmail remember to turn off \"Less secure app access\" in Google Account > Secrity")
 print()
 
@@ -30,10 +29,8 @@ except Exception as err:
     print()
     print(err)
 
-print(f"{colors.green}Done!{colors.end}")
-print()
-print(f"{colors.bold}===================={colors.end}")
-print()
+
+
 print(f"{colors.blue}LOGIN:{colors.end}")
 print()
 
